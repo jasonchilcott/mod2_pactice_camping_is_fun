@@ -1,6 +1,6 @@
 class SignupsController < ApplicationController
     def index
-      @signups = Signup.all
+        @signups = Signup.all
     end
 
 
@@ -27,5 +27,4 @@ class SignupsController < ApplicationController
     def signup_params
         params.require(:signup).permit!
     end    
-  end
-  
+end

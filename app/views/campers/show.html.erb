@@ -1,6 +1,6 @@
 <h1><%= @camper.name %></h1>
 
 <p>Age: <%= @camper.age %></p>
-<% @camper.activities.each do |a| %>
-<p><%= link_to a.name, activity_path(a) %> </p>
+<% @camper.signups.each do |su| %>
+    <p><%= link_to "#{su.activity.name} - #{su.time}:00", activity_path(su.activity) %> </p>
 <% end %>
