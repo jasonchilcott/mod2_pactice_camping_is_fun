@@ -12,6 +12,6 @@
 <%= f.label :activity %>
 <%= f.collection_select :activity_id, Activity.all, :id, :name %>
 <%= f.label :time %>
-<%= f.number_field :time %>
+<%= f.select :time, (0..23) %>
 <%= f.submit %>
 <% end %>
